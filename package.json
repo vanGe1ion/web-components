@@ -1,0 +1,16 @@
+{
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "start": "grunt server"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-express-server": "^0.5.4"
+  }
+}

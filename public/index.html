@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 0;
+        margin: 0;
+      }
+
+      c-list {
+        max-width: 50%;
+      }
+    </style>
+
+    <script type="module" src="c-item/index.js"></script>
+    <script type="module" src="c-list/index.js"></script>
+    <script src="todo-list.js"></script>
+  </head>
+  <body>
+    <c-list title="My TODO list" variant="circle"></c-list>
+
+    <script>
+      const body = document.querySelector("body");
+      const list = body.querySelector("c-list");
+      initTodoList(list);
+
+      const myList = document.createElement("c-list");
+      initTodoList(myList);
+      myList.title = "My plans";
+      myList.variant = "circle";
+      body.append(myList);
+    </script>
+
+    <script src="http://localhost:1338/livereload.js"></script>
+  </body>
+</html>
