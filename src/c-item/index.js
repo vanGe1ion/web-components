@@ -2,7 +2,7 @@ import style from "./style.js";
 
 export class CustomItem extends HTMLElement {
   #text = "";
-  #variant = null;
+  #variant = CustomItem.#variantList[0];
 
   #doneBtn;
   #abortBtn;
@@ -14,7 +14,7 @@ export class CustomItem extends HTMLElement {
 
   #events;
 
-  static #variantList = ["circle", "disc", "square"];
+  static #variantList = ["disc", "circle", "square"];
   static #template = (() => {
     const template = document.createElement("template");
     template.innerHTML = `
@@ -68,7 +68,7 @@ export class CustomItem extends HTMLElement {
     const variant = this.getAttribute("variant");
     if (CustomItem.#variantList.includes(variant))
       return (this.#variant = variant);
-    this.#variant = null;
+    this.#variant = CustomItem.#variantList[0];
   }
 
   get variant() {

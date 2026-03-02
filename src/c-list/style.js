@@ -19,13 +19,13 @@ style.replaceSync(`
 
   div.control {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     padding: 0 10px;
   }
 
   input {
     font: inherit;
-    width: 100%;
+    flex-grow: 1;
     border: none;
     padding: 0;
     border-bottom: 1px solid blue;
@@ -34,6 +34,11 @@ style.replaceSync(`
     &:focus-visible {
       outline: none;
     }
+  }
+
+  div.control {
+    display: flex;
+    gap: 4px;
   }
 
   button {
@@ -49,6 +54,25 @@ style.replaceSync(`
 
     &:hover {
       background: rgb(212, 221, 252);
+    }
+  }
+
+
+  #mark-btn { 
+    li {
+      margin-left: 15px;
+    }
+
+    &.circle li{
+      list-style-type: circle;
+    } 
+
+    &.disc li{
+      list-style-type: disc;
+    } 
+
+    &.square li{
+      list-style-type: square;
     }
   }
 

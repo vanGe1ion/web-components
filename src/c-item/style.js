@@ -36,7 +36,7 @@ style.replaceSync(`
 
   input {
     font: inherit;
-    width: 100%;
+    flex-grow: 1;
     border: none;
     padding: 0;
     border-bottom: 1px solid transparent;
