@@ -12,28 +12,24 @@
         margin: 0;
       }
 
-      c-list {
-        max-width: 50%;
+      todo-list {
+        width: 50%;
       }
     </style>
 
-    <script type="module" src="c-item/index.js"></script>
-    <script type="module" src="c-list/index.js"></script>
-    <script src="todo-list.js"></script>
+    <script type="module" src="todo-list/index.js"></script>
   </head>
   <body>
-    <c-list title="My TODO list" variant="circle"></c-list>
+    <todo-list title="My TODO list" variant="circle"></todo-list>
 
     <script>
       const body = document.querySelector("body");
-      const list = body.querySelector("c-list");
-      initTodoList(list);
-
-      const myList = document.createElement("c-list");
-      initTodoList(myList);
-      myList.title = "My plans";
-      myList.variant = "circle";
+      const myList = document.createElement("todo-list");
+      myList.setAttribute("title", "My plans");
+      myList.setAttribute("variant", "square");
       body.append(myList);
+      setTimeout(() => myList.remove(), 1000);
+      setTimeout(() => body.append(myList), 2000);
     </script>
 
     <script src="http://localhost:1338/livereload.js"></script>

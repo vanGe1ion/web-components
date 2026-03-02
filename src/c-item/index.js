@@ -1,6 +1,6 @@
 import style from "./style.js";
 
-class CustomItem extends HTMLElement {
+export class CustomItem extends HTMLElement {
   #text = "";
   #variant = null;
 

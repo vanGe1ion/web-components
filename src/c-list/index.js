@@ -1,6 +1,6 @@
 import style from "./style.js";
 
-class CustomList extends HTMLElement {
+export class CustomList extends HTMLElement {
   #title = "TODO list";
   #variant = null;
 
@@ -40,7 +40,7 @@ class CustomList extends HTMLElement {
     this.#input = template.querySelector("input");
     this.#slot = template.querySelector("slot");
 
-    this.addField = this.addField.bind(this)
+    this.addField = this.addField.bind(this);
 
     this.shadowRoot.append(template);
     this.shadowRoot.adoptedStyleSheets = [style];
